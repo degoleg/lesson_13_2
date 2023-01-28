@@ -49,8 +49,8 @@ def update_book(book_id):
 
 @app.route('/books/<int:book_id>/', methods=['DELETE'])
 def delete_book(book_id):
-    utils.delete_book()
-    return jsonify({"content": f"Удаляем книжку {book_id}"})
+    utils.delete_book(book_id)
+    return ""
 
 if __name__ == "__main__":
     app.run()
